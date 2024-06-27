@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hack Hour</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800 flex">
+    <nav class="bg-gray-800 text-white p-4 h-screen w-64">
+        <ul class="space-y-4">
+            <li><a href="#home" class="flex items-center space-x-2 hover:underline tab-link" data-target="home"><i class="fas fa-home"></i><span>Home</span></a></li>
+            <li><a href="#slack" class="flex items-center space-x-2 hover:underline tab-link" data-target="slack"><i class="fab fa-slack"></i><span>Slack Integration</span></a></li>
+            <li><a href="#chatgpt" class="flex items-center space-x-2 hover:underline tab-link" data-target="chatgpt"><i class="fas fa-robot"></i><span>ChatGPT</span></a></li>
+            <li><a href="#history" class="flex items-center space-x-2 hover:underline tab-link" data-target="history"><i class="fas fa-history"></i><span>History</span></a></li>
+            <li><a href="#shop" class="flex items-center space-x-2 hover:underline tab-link" data-target="shop"><i class="fas fa-shopping-cart"></i><span>Shop</span></a></li>
+            <li><a href="#settings" class="flex items-center space-x-2 hover:underline tab-link" data-target="settings"><i class="fas fa-cogs"></i><span>Settings</span></a></li>
+        </ul>
+    </nav>
+    <main class="p-4 flex-1">
+        <section id="home" class="tab-content">
+            <h1 class="text-2xl font-bold">Hack Hour</h1>
+            <div class="mt-4">
+                <input type="text" id="coding-field" placeholder="What are you coding?" class="p-2 border rounded w-full">
+                <div id="timer" class="text-center text-3xl font-bold my-4">60:00</div>
+                <button id="start-button" class="bg-green-500 text-white p-2 rounded">Start</button>
+                <button id="end-button" class="bg-red-500 text-white p-2 rounded">End</button>
+            </div>
+        </section>
+        <section id="slack" class="tab-content hidden">
+            <h2 class="text-xl font-bold">Slack Integration</h2>
+            <input type="text" id="slack-id" placeholder="Enter your Slack ID" class="p-2 border rounded w-full">
+            <button id="connect-slack" class="bg-blue-500 text-white p-2 rounded mt-2">Connect</button>
+        </section>
+        <section id="chatgpt" class="tab-content hidden">
+            <h2 class="text-xl font-bold">ChatGPT</h2>
+            <p>Placeholder for ChatGPT integration.</p>
+        </section>
+        <section id="history" class="tab-content hidden">
+            <h2 class="text-xl font-bold">History</h2>
+            <ul id="session-history" class="list-disc pl-5"></ul>
+        </section>
+        <section id="shop" class="tab-content hidden">
+            <h2 class="text-xl font-bold">Shop</h2>
+            <p>Placeholder for Shop.</p>
+        </section>
+        <section id="settings" class="tab-content hidden">
+            <h2 class="text-xl font-bold">Settings</h2>
+            <button id="dark-mode" class="bg-gray-700 text-white p-2 rounded">Dark Mode</button>
+            <button id="light-mode" class="bg-gray-300 text-black p-2 rounded">Light Mode</button>
+            <div class="mt-4">
+                <label for="notification-frequency">Notification Frequency</label>
+                <input type="number" id="notification-frequency" class="p-2 border rounded w-full" placeholder="Frequency in minutes">
+                <label for="notification-start">Notification Start</label>
+                <input type="number" id="notification-start" class="p-2 border rounded w-full" placeholder="Start after how many minutes">
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+
